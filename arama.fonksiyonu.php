@@ -15,12 +15,12 @@ mysqli_query($db, "set names 'utf8'");
 ?>
 
 <form method="get">
-  Aranılan kelime: <input type="text" name="aranansozcuk" placeholder="Aranan Kelime" value="<?php echo $_GET["aranansozcuk"];?>">
+  Aranılan kelime: <input type="text" name="aranankelime" placeholder="Aranan Kelime" value="<?php echo $_GET["aranankelime"];?>">
   <input class="btn btn-success" type="submit" value="Ara !">
 </form>
 
 
-<?php if( isset( $_GET["aranansozcuk"] ) ) {  // Arama formu gönderilmiş ?>
+<?php if( isset( $_GET["aranankelime"] ) ) {  // Arama formu gönderilmiş ?>
 
   <h1 class="mt-5">Arama Sonucu</h1>
 
@@ -31,7 +31,7 @@ mysqli_query($db, "set names 'utf8'");
       </tr>
 
     <?php
-    $SQL   = "SELECT kelime1, kelime2 FROM esanlam WHERE kelime1 LIKE '{$_GET["aranansozcuk"]}' ORDER BY kelime1 ";
+    $SQL   = "SELECT kelime1, kelime2 FROM esanlam WHERE kelime1 LIKE '{$_GET["aranankelime"]}' ORDER BY kelime1 ";
     $rows  = mysqli_query($db, $SQL);
 
     while($row = mysqli_fetch_assoc($rows)) { // Kayıt adedince döner
@@ -40,7 +40,7 @@ mysqli_query($db, "set names 'utf8'");
             <td>%s</td>
             <td>%s</td>
           </tr>",
-          $row["kelime2"], $row["kelime1"] );
+          $row["kelime1"], $row["kelime2"] );
     }
 
     ?>
