@@ -16,7 +16,7 @@
     <div class="container">
 
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">BulmacaSözlüğü</a>
+        <a class="navbar-brand" href="index.php">Eş=Anlamı</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,7 +35,7 @@
 
 <div class="row mt-4 mb-4">
   <div class="col-md-12 text-center">
-      <img class="img-fluid" src="bulmaca-buyuk.png" />
+      <img class="img-fluid" src="es=anlam.png" />
   </div>
 </div>
 
@@ -45,7 +45,7 @@
   </div>
   <div class="col-md-8">
     <div class="jumbotron">
-      <h1 class="display-4">Bulmaca Sözlüğü...</h1>
+      <h1 class="display-4">Es Anlamını Bulma</h1>
       <p class="lead">Bu proje, BootStrap, PHP ve MySQL'i anlamak için Özgür Yazılım Yaz Kampında örnek olarak geliştirilmiştir.</p>
       <hr class="my-4">
       <p><a href="https://github.com/nuriakman/bulmaca_sozlugu">Projenin kaynak kodları</a> github sitesinden temin edilebilir</p>

@@ -35,7 +35,7 @@
 
 <div class="row mt-4 mb-4">
   <div class="col-md-12 text-center">
-      <img class="img-fluid" src="bulmaca.png" />
+      <img class="img-fluid" src="esanlamkucuk.png" />
   </div>
 </div>
 

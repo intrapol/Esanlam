@@ -10,16 +10,12 @@ $db = mysqli_connect($servername, $username, $password, $dbname);
 if (!$db) { die("Hata oluştu: " . mysqli_connect_error()); }
 //echo "Bağlantı tamam!";
 
-// Oluşabilecek Türkçe karakter gösterimi sorunlarını giderelim...
+// Oluşabilecek Türkçe karakter gösterimi kelime1nlarını giderelim...
 mysqli_query($db, "set names 'utf8'");
 ?>
 
-<div class="alert alert-success" role="alert">
-  Arama sırasında bilmediğiniz harfler için <b>alt çizgi</b> karakterini kullanın
-</div>
-
 <form method="get">
-  Aranılan sözcük: <input type="text" name="aranansozcuk" placeholder="Aranan Sözcük" value="<?php echo $_GET["aranansozcuk"];?>">
+  Aranılan kelime: <input type="text" name="aranansozcuk" placeholder="Aranan Kelime" value="<?php echo $_GET["aranansozcuk"];?>">
   <input class="btn btn-success" type="submit" value="Ara !">
 </form>
 
@@ -31,11 +27,11 @@ mysqli_query($db, "set names 'utf8'");
   <table class="table table-hover">
       <tr class="table-success">
         <th scope="col">Sözcük</th>
-        <th scope="col">Açıklaması</th>
+        <th scope="col">Eş Anlamlısı</th>
       </tr>
 
     <?php
-    $SQL   = "SELECT soru, cevap FROM bulmaca WHERE cevap LIKE '{$_GET["aranansozcuk"]}' ORDER BY soru ";
+    $SQL   = "SELECT kelime1, kelime2 FROM esanlam WHERE kelime1 LIKE '{$_GET["aranansozcuk"]}' ORDER BY kelime1 ";
     $rows  = mysqli_query($db, $SQL);
 
     while($row = mysqli_fetch_assoc($rows)) { // Kayıt adedince döner
@@ -44,7 +40,7 @@ mysqli_query($db, "set names 'utf8'");
             <td>%s</td>
             <td>%s</td>
           </tr>",
-          $row["cevap"], $row["soru"] );
+          $row["kelime2"], $row["kelime1"] );
     }
 
     ?>
