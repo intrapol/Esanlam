@@ -48,7 +48,7 @@
       <h1 class="display-4">Es Anlamını Bulma</h1>
       <p class="lead">Bu proje, BootStrap, PHP ve MySQL'i anlamak için Özgür Yazılım Yaz Kampında örnek olarak geliştirilmiştir.</p>
       <hr class="my-4">
-      <p><a href="https://github.com/nuriakman/bulmaca_sozlugu">Projenin kaynak kodları</a> github sitesinden temin edilebilir</p>
+      <p><a href="https://github.com/intrapol/Esanlam">Projenin kaynak kodları</a> github sitesinden temin edilebilir</p>
       <a class="btn btn-success btn-lg" href="https://kamp.linux.org.tr/2019/yaz/" role="button">Özgür Yazılım Yaz Kampı hakkında bilgi alın !</a>
     </div>
   </div>
