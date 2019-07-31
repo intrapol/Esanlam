@@ -15,7 +15,7 @@ mysqli_query($db, "set names 'utf8'");
 ?>
 
 <form method="get">
-  Aranılan kelime: <input type="text" name="aranankelime" placeholder="Aranan Kelime" value="<?php echo $_GET["aranankelime"];?>">
+  Aranılan kelime: <input type="text" name="aranankelime" placeholder="Aranan Kelime" value="<?php echo $_GET["aranankelime"];?>"autocomplete="off">
   <input class="btn btn-success" type="submit" value="Ara !">
 </form>
 
